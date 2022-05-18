@@ -48,8 +48,13 @@ From: ubuntu:18.04
     chmod 774 -R $GDIR/bisweb*/
 
 
+    cd $GDIR
+    git clone https://github.com/YaleMRRC/calPrep.git
+
+
 %environment
     export PATH=$GDIR/bisweb/src/biswebpython/modules/:$PATH
+    export PATH=$GDIR/calPrep/:$PATH
 
 
 
