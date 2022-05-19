@@ -443,7 +443,6 @@ dependencies:
     - neurotools==0.3.1
     - nilearn==0.5.2
     - numcodecs==0.9.1
-    - numpy==1.19.3
     - nwb-conversion-tools==0.11.1
     - nwbinspector==0.4.4
     - oauth2client==4.1.3
