@@ -31,7 +31,7 @@ For the time being, the easiest way to use the preprocessing pipeline is to do s
 
 First you need to install [singularity](https://singularity.hpcng.org/user-docs/master/quick_start.html)
 
-Then you can download this [file](https://cloud.sylabs.io/library/daveoc90/bis-mid/ubuntubis-mid-img) (1.7GB, md5sum = dcb254e8aa6c86bcd1f57f876b54a60e) or build the image using the specification file in install/thing.txt and run the following command:
+Then you can download this [file](https://cloud.sylabs.io/library/daveoc90/bis-mid/ubuntubis-mid-img) or build the image using the specification file in install/thing.txt and run the following command:
 
 ```
 singularity build ubuntuBIS.sif ../biswebSing.recipe
@@ -173,7 +173,7 @@ Addional notes:
 - If you run the code multiple times in order to tweak how the data is split you will need to delete the qc figures, as they do not get overwritten.
 ### Preprocessing
 
-The preprocessing code is currenty best used as a singularity container. It is available for download [here](https://drive.google.com/file/d/1H7PIvLk06wPqgDPYvIvD4HHfqPf2lkAm/view?usp=sharing) (1.7GB, md5sum = dcb254e8aa6c86bcd1f57f876b54a60e)
+The preprocessing code is currenty best used as a singularity container. It is available for download [here](https://cloud.sylabs.io/library/daveoc90/bis-mid/ubuntubis-mid-img)
 
 The pipeline will perform the functions detailed in the figure below:
 
