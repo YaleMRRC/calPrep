@@ -1,0 +1,26 @@
+---
+
+smooth:
+  mocoSmooth: 16
+  downsampleSmooth: 4
+
+mocoParams:
+  targetSlice : middle # can be mean, middle, or integer referring to slice (zero indexed)
+  intscale : 1
+  numbins :  32
+  levels :   1
+  optimization : 'gradientdescent' # 0 hillclimb, 1 gradient descent, 2 conjugate descent
+  normalize : True,
+  steps : 4
+  iterations : 32
+  mode : 'rigid' # rigid
+  resolution' : 1.5
+  return_vector : "false"
+  metric : 'NMI' # 1=CC 0,=SSD 3=NMI, 2=MI
+  debug : True
+  doreslice : True
+
+
+downsample : 2
+
+debug: True
