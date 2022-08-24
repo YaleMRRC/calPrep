@@ -200,7 +200,6 @@ if __name__ == '__main__':
                 spatialNoiseFiles = sorted(glob.glob(spatialNoiseFilePath))
 
 
-
                 if len(spatialSignlFiles) == 3 and len(spatialNoiseFiles) == 3:
 
                     #oppath=os.path.join(opdir,cellType,sesh,animalNum,'ca2/',f.split('.')[0].split('_part')[0])
@@ -214,7 +213,6 @@ if __name__ == '__main__':
                     if not os.path.isfile(threePartNoisePath):
                         concatNiftis(spatialNoiseFiles,threePartNoisePath)
                 
-
 
 
                     # Instantiate input dictionary to run bisweb script
@@ -232,10 +230,10 @@ if __name__ == '__main__':
                     ipDict['runoption'] = 'temporal'
                     ipDict['pythonPath'] = pythonPath
 
-
+                    ipDict['configfile'] = configFile
                     ipDict['createmcref'] = False
                     #ipDict['mask'] = os.path.join('/ca2data/PreprocessedData/mcRefFiles/',cellType,cellType+'_'+animalNum+'_'+sesh.replace('-','-0')+'_RotOptical_maskRPI.nii.gz')
-                    ipDict['mask'] = os.path.join(humanMadeMasks,cellType,cellType+'_'+animalNum+'_'+sesh.replace('-','-0')+'_RotOptical_maskRPI.nii.gz')
+                    ipDict['mask'] = os.path.join(humanMadeMasks,cellType,cellType+'_'+animalNum+'_'+sesh.replace('-','-')+'_RotOptical_maskRPI.nii.gz')
 
                     lastFile = os.path.join('/'.join(root.split('/')[:-1]),'signl_out.nii.gz')
 
@@ -243,7 +241,7 @@ if __name__ == '__main__':
 
                     checkIps = [os.path.isfile(ipDict[ipF]) for ipF in checkIpsList]
  
-             
+
                     if all(checkIps) and not os.path.isfile(lastFile):
                         if not os.path.isdir(oppath):
                             os.makedirs(oppath)
