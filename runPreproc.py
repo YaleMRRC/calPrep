@@ -25,7 +25,7 @@ def runBiswebCa2(ipDict,hpc=0,sing=1):
 
     
     if sing == 1:
-        cmd = 'singularity exec ' + ipDict['calPreprocPath'] + ' calciumPreprocess2.py '+' '.join(['--%s %s' % kv for kv in ipDict.items() if not any(kv[0] == aT for aT in ['calPreprocPath'])])
+        cmd = 'singularity exec ' + ipDict['calPreprocPath'] + ' calciumPreprocess2.py '+' '.join(['--%s %s' % kv for kv in ipDict.items() if not any(kv[0] == aT for aT in ['calPreprocPath','pythonPath'])])
         print(cmd)
 
     elif sing == 0:
